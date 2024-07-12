@@ -1,0 +1,67 @@
+@media (max-width:991px){
+    nav{
+        background-color: green;
+        position: relative;
+    
+    }
+    nav .menu{
+        position: absolute;
+        background-color: red;
+        inset: 0 50px 0 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: 0.5s;
+        z-index: 999;
+    }
+    nav.active .menu{
+        transform: translateX(0%);
+        transition: 1s;
+    }
+    nav .menu ul{
+        
+        width: 100vw;
+    }
+    nav .menu ul li{
+        display: block;
+        width: 100%;
+    }
+    nav .menuBtn{
+        display: block;
+        /* position: absolute; */
+        /* right: 15px; */
+        font-size: 1.4rem;
+        color: white;
+        cursor: pointer;
+    }
+    .cancelBtn{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: white;
+       
+
+    }
+    .background{
+        display: block;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0,0,0,0.5);
+        min-height: 100vh;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    nav.active .background{
+        opacity: 1;
+        visibility: visible;
+        transition: 0.7s;
+    }
+}
